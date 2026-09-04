@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/* 1. Garante que o HTML e o BODY ocupem 100% da tela */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Opcional: Se o gradiente estiver no body, garante a exibição fixa */
+body {
+  background: radial-gradient(circle at 0% 10%, #2C50A8 0%, #0f172a 40%, #0B0F19 100%);
+  background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+  min-height: 100vh;
+  margin: 0;
+  color: #ffffff;
+  
+  /* Permite usar Flexbox no body para que o app-root estique corretamente */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+    margin-top: 48px;
+}
