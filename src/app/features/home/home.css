@@ -104,20 +104,22 @@ position: absolute;
   width: 100%;
 }
 
-.profile-buttons-button {
+.profile-buttons-link {
   flex: 1;
   padding: 0.6rem 0.5rem;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   color: #ffffff;
+  text-align: center;
+  text-decoration: none;
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.profile-buttons-button:hover {
+.profile-buttons-link:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: #ffffff;
 }
