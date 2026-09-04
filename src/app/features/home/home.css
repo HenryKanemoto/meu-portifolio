@@ -1,0 +1,235 @@
+/* Reset Básico e Fontes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  /* Fundo com degradê azul escuro como o da imagem */
+  background: radial-gradient(circle at top left, #1e293b, #0f172a, #090d16);
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/* Título Principal */
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+/* Container Principal Layout Grid */
+.main-Content {
+  max-width: 1000px;
+  height: 55vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Coluna esquerda (perfil) e direita (skills) */
+  gap: 1.5rem;
+}
+
+/* Estilo do Card Principal (Perfil) */
+.main-card {
+  position: relative;
+  padding-top: 4rem;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+
+
+.profile-photo {
+position: absolute;
+  /* Move a foto para cima e para a esquerda, extrapolando a borda */
+  top: -50px;
+  left: 20px;
+  
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #cbd5e1; /* Cor temporária de visualização */
+  object-fit: cover;
+  
+  /* Garante que a imagem fique sobre a borda do card */
+  z-index: 10;
+}
+
+.profile-name {
+  margin-left: 8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.profile-ocupation {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.profile-specialization {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.profile-contact {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.profile-buttons-button {
+  flex: 1;
+  padding: 0.6rem 0.5rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-buttons-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+/* Lado Direito: Container de Cards de Skills e Objetivos */
+.skill-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+/* Card Objetivos (Ocupa as 2 colunas da direita) */
+.objetivos {
+  grid-column: 1 / -1;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1.5px solid #0284c7; /* Borda Azul */
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.objetivos-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.objetivos-text {
+  margin-top: 42px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* Card Hard Skills */
+.hardskils {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1.5px solid #dc2626; /* Borda Vermelha */
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+
+.hardskills-title {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hardskills-list {
+  list-style: none;
+}
+
+.hardskills-iten {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+/* Ponto marcador estilizado nas li */
+.hardskills-iten::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #cbd5e1;
+}
+
+/* Card Soft Skills */
+.softskills {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1.5px solid #16a34a; /* Borda Verde */
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+
+.softskills-title {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.softskills-list {
+  list-style: none;
+}
+
+.softskills-iten {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.softskills-iten::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #cbd5e1;
+}
+
+/* Adaptabilidade para Telas Menores (Mobile) */
+@media (max-width: 768px) {
+  .main-Content {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .objetivos {
+    grid-column: auto;
+  }
+}
